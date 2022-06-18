@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">    
+    <title>Form Result</title>
+</head>
+
+<body>
+    <h1>Entered Credentials</h1>
+    <hr>
+    <div class="name">Name : {{data[0]}}</div>
+    <div class="email">Email Id : {{data[1]}}</div>
+    <div class="comment">
+        <div>Type : {{data[2]}}</div>
+        <div>{{data[3]}}</div>
+    </div>
+</body>
+
+</html>

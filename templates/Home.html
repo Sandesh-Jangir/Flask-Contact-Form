@@ -21,14 +21,13 @@
                     </a>
                 </div>
             </div>
-        <form action="/submit" method="post">
+        <form action="/result" method="post">
             <input type="name" placeholder="Name" name="name" required>
             <input type="email" placeholder="Email ID" name="email" required>
             <select name="comment-type" name="type">
-                <option value="query">Query</option>
-                <option value="query">Feedback</option>
-                <option value="query">Complaint</option>
-                <option value="query">Other</option>
+                {% for option in options %}
+                    <option value="{{option}}">{{option}}</option>
+                {% endfor %}
             </select>
             <textarea name="comment" id="comment" cols="20" rows="5" placeholder="Type Something..." required></textarea>
             <button type="submit">Submit</button>
